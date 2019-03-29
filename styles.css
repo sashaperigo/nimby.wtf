@@ -1,11 +1,25 @@
-body {
-  font-family:"Lato",sans-serif;
+body,
+* {
+  font-family: "Lato", sans-serif;
   line-height: 1.1;
   color: #404040;
+  font-size: 1rem;
+}
+
+main {
+  max-width: 750px;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  html,
+  * {
+    text-align: center;
+  }
 }
 
 a {
-  color: #7381CE;
+  color: #7381ce;
   font-weight: bold;
   text-decoration: none;
 }
@@ -30,9 +44,14 @@ a {
   width: 100%;
 }
 
+#title-text h1 {
+  font-size: 1.75rem;
+  margin-top: 0;
+}
+
 #button {
   font-size: 18pt;
-  background-color: #E6525A;
+  background-color: #e6525a;
   color: white;
   padding: 7px;
   border-radius: 7px;
@@ -44,12 +63,17 @@ p {
 }
 
 .wrapper {
-  background-color: #7381CE;
+  background-color: #7381ce;
   border-radius: 7px;
   padding-top: 2em;
   padding-bottom: 2em;
   height: auto;
-  width: 80%;
+  margin: auto;
+}
+
+.one,
+.two {
+  margin: auto;
 }
 
 .one {
@@ -63,8 +87,11 @@ p {
 
 @media (min-width: 767px) {
   #title {
-    width: 800px;
-    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 750px;
+    margin: auto;
   }
 
   #button {
@@ -81,27 +108,17 @@ p {
 
   #logo-container {
     width: 25%;
-    float: left;
     margin: 0;
-    position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
   }
 
   #title-text {
-    width: 75%;
+    width: calc(100% - 200px);
     margin: 0;
-    position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    float: right;
   }
 
   .wrapper {
     padding: 0;
-    background-color: #7381CE;
+    background-color: #7381ce;
     border-radius: 7px;
     width: 750px;
     height: 480px;
